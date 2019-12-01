@@ -1,0 +1,237 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+header{
+  height: 100vh;
+  width: 100%;
+  background-image: url("../img/web-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1{
+    color: aliceblue;
+    font-size: xx-large;
+  }
+  div{
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    background-color: rgba(0,0,0, .5);
+    border-radius: 35%;
+    background-image: url("../img/logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 250px;
+    width: 250px;
+  }
+}
+
+nav{
+  position: fixed;
+  z-index: 900;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  color: aliceblue;
+  background-color: rgba(7, 7, 7, 0.85);
+  .logo-nav{
+    margin-left: 5%;
+    background-color: black;
+    background-image: url("../img/logo.svg");
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 80px;
+    width: 80px;
+    text-decoration: none;
+    &:after{
+      content: "SpiderWEB";
+      color: aliceblue;
+      margin-left: 100px;
+      font-size: 40px;
+      line-height: 80px;
+    }
+  }
+  .nav{
+    position: fixed;
+    top: 100px;
+    right: 0;
+    width: 100%;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0,0,0, .9);
+    a {
+      justify-content: center;
+      background-color: rgba(100, 100, 100, .5);
+      padding: 10px 0;
+      margin: 50px auto;
+      text-decoration: none;
+      color: aliceblue;
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-size: x-large;
+      &:hover{
+        background-color: rgba(150, 150, 150, .5);
+        font-size: large;
+      }
+      h3{
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}
+
+main{
+  section{
+    h2{
+      text-align: center;
+      font-size: xx-large;
+    }
+  }
+  .ind-service{
+    margin: 50px 0;
+  }
+  .ind-teamet{
+    margin: 50px auto;
+    display: flex;
+    width: 100%;
+    max-width: 1440px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    h2{
+      width: 100%;
+    }
+    div{
+      width: 40%;
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      img{
+        height: 400px;
+        width: 100%;
+        background-color: gray;
+      }
+      div{
+        position: absolute;
+        bottom: 50px;
+        background-color: rgba(10, 10, 10, .9);
+        width: 100%;
+        color: aliceblue;
+      }
+    }
+  }
+}
+
+footer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  div:nth-of-type(odd){
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: center;
+    a{
+      padding: 0 20px;
+    }
+    &:nth-of-type(3){
+      justify-content: center;
+    }
+  }
+
+}
+
+@media screen and(min-width: 768px) {
+  nav{
+    position: fixed;
+    z-index: 900;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    .logo-nav{
+      margin-left: 5%;
+      background-color: black;
+      background-image: url("../img/logo.svg");
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 80px;
+      width: 80px;
+      text-decoration: none;
+      &:after{
+        content: "SpiderWEB";
+        color: aliceblue;
+        margin-left: 100px;
+        font-size: 40px;
+        line-height: 80px;
+      }
+    }
+    .nav-btn{
+      display: none;
+    }
+    .nav{
+      position: unset;
+      display: flex;
+      flex-wrap: nowrap;
+      width: 40%;
+      justify-content: space-between;
+      align-items: center;
+      a {
+        justify-content: center;
+        background-color: rgba(100, 100, 100, .5);
+        padding: 10px 30px;
+        margin: auto;
+        text-decoration: none;
+        color: aliceblue;
+        font-size: medium;
+        &:hover{
+          background-color: rgba(150, 150, 150, .5);
+          font-size: large;
+        }
+        h3{
+          text-align: center;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  main{
+    .ind-teamet{
+      justify-content: space-around;
+      div{
+        width: 20%;
+        padding: 5px;
+        img{
+          height: 600px;
+        }
+      }
+    }
+  }
+}

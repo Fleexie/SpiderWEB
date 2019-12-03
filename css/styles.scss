@@ -102,8 +102,90 @@ main{
       font-size: xx-large;
     }
   }
+  .ind-info{
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+
+  }
   .ind-service{
-    margin: 50px 0;
+
+    width: 60%;
+    margin: 50px 20%;
+
+
+    .grid-service{
+      width: 100%;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: auto auto;
+      row-gap: 20px;
+      column-gap: 20px;
+      grid-template-areas:
+              "1 2"
+              "3 4";
+
+    .service{
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: 300px;
+      background-color: lightgrey;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      h3{
+        font-size: x-large;
+      }
+
+    }
+      &:nth-of-type(1){
+        grid-area: 1;
+      }
+      &:nth-of-type(2){
+        grid-area: 2;
+      }
+      &:nth-of-type(3){
+        grid-area: 3;
+      }
+      &:nth-of-type(4){
+        grid-area: 4;
+      }
+      .cover{
+        opacity: 0;
+        animation: forwards 1s ease-in;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: end;
+        span{
+          display: none;
+          animation: all 1s ease-in;
+
+        }
+      }
+      .service:hover .cover{
+        opacity: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: gray;
+        z-index: 2;
+        align-items: center;
+        justify-content: center;
+        span{
+          z-index: 3;
+          display: block;
+        }
+      }
+
+    }
+    h2{
+      width: 100%;
+    }
   }
   .ind-teamet{
     margin: 50px auto;
@@ -233,5 +315,15 @@ footer{
         }
       }
     }
+  }
+}
+
+
+@keyframes service {
+  from{
+    justify-content: end;
+  }
+  to{
+    justify-content: center;
   }
 }

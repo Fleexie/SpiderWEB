@@ -1,0 +1,63 @@
+
+.os{
+  padding-top: 15%;
+  .jannik{
+    background-image: url("../img/headshot.jpeg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 250px;
+    border-radius: 25%;
+    margin: 5%;
+  }
+  .mohammed{
+    background-image: url("../img/headshot.jpeg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 250px;
+    border-radius: 25%;
+    margin: 5%;
+  }
+  .robin{
+    background-image: url("../img/headshot.jpeg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 250px;
+    border-radius: 25%;
+    margin: 5%;
+  }
+  .mia{
+    background-image: url("../img/headshot.jpeg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 250px;
+    border-radius: 25%;
+    margin: 5%;
+  }
+
+  .jannik:hover, .mohammed:hover, .robin:hover, .mia:hover{
+      cursor: pointer;
+      filter: grayscale(100%);
+    .hoverTekst{
+      display: block;
+    }
+  }
+
+  .hoverTekst{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    text-align: center;
+  }
+}
+
+.omOsSektion{
+  h3, h1{
+    margin: 5%;
+    padding: 6px;
+  }
+}

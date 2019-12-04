@@ -111,7 +111,9 @@ main{
   .ind-service{
 
     width: 60%;
-    margin: 50px 20%;
+    margin: 50px auto;
+    max-width: 1440px;
+
 
 
     .grid-service{
@@ -161,7 +163,7 @@ main{
         justify-content: end;
         span{
           display: none;
-          animation: all 1s ease-in;
+          animation: service 200ms ease-in-out;
 
         }
       }
@@ -179,6 +181,7 @@ main{
         span{
           z-index: 3;
           display: block;
+          font-size: larger;
         }
       }
 
@@ -321,9 +324,11 @@ footer{
 
 @keyframes service {
   from{
-    justify-content: end;
+    transform: translateY(200px);
+    opacity: 0;
   }
   to{
-    justify-content: center;
+    transform: translateY(0);
+    opacity: 1;
   }
 }

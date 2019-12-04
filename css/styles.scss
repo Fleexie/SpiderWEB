@@ -223,6 +223,71 @@ main{
   }
 }
 
+.mapouter{
+  position:relative;
+  text-align:right;
+  height:400px;
+  width:100%;
+}
+.gmap_canvas {
+  overflow:hidden;
+  background:none!important;
+  height:400px;
+  width:100%;
+}
+iframe{
+  width: 100%;
+  height: 100%;
+}
+
+.map-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 20, 20, .2);
+}
+.map-overlay:hover{
+  display: none;
+}
+
+.kontakt-page{
+  display: grid;
+  width: 100%;
+  grid-template-rows: 200px 200px;
+  justify-content: space-around;
+  grid-template-columns: 40% 40%;
+  grid-template-areas:
+          "infoIntro formK"
+          "infoK formK";
+}
+
+.kontakt-info{
+  grid-area: infoK;
+}
+
+.kontakt-intro{
+  grid-area: infoIntro;
+}
+
+.Kontakt-Form{
+  grid-area: formK;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+
+  input{
+    width: 100%;
+  }
+
+  textarea{
+
+  }
+}
+
 footer{
   width: 100%;
   display: flex;

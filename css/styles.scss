@@ -33,6 +33,14 @@ header{
     width: 250px;
   }
 }
+.kontakt-header{
+  height: 50vh;
+  flex-direction: column;
+  color: aliceblue;
+  h2{
+    font-size: large;
+  }
+}
 
 nav{
   position: fixed;
@@ -131,16 +139,11 @@ main{
 
     .grid-service{
       width: 100%;
-      display: grid;
-      grid-template-columns: 45% 45%;
-      grid-template-rows: auto auto;
-      row-gap: 20px;
-      column-gap: 10%;
-      grid-template-areas:
-              "1 2"
-              "3 4";
+      display: flex;
+      flex-direction: column;
 
     .service{
+      margin: 10px 0;
       position: relative;
       display: flex;
       width: 100%;
@@ -221,16 +224,22 @@ main{
       align-items: center;
       position: relative;
       img{
-        height: 400px;
+        height: 350px;
         width: 100%;
         background-color: gray;
       }
       div{
         position: absolute;
-        bottom: 50px;
+        bottom: 25px;
         background-color: rgba(10, 10, 10, .9);
         width: 100%;
         color: aliceblue;
+        h3{
+          font-size: medium;
+        }
+        h4{
+          font-size: small;
+        }
       }
     }
   }
@@ -288,6 +297,8 @@ iframe{
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .kontakt-info{
@@ -315,6 +326,9 @@ iframe{
   align-items: center;
   height: 100%;
 
+  label{
+    margin: 15px 0 0 0;
+  }
   input{
     width: 50%;
     height: 30px;
@@ -329,9 +343,20 @@ iframe{
 
   textarea{
     width: 50%;
+    height: 100px;
+    border: gray 1.5px solid;
+    border-top: none;
   }
   button{
-
+    font-size: medium;
+    padding: 10px 15px;
+    border-radius: 15px;
+    background-color: aliceblue;
+    margin: 25px 0 0 0;
+    &:hover{
+      font-size: large;
+      background-color: lightblue;
+    }
   }
 }
 
@@ -437,6 +462,11 @@ text-align: center;
   }
 
   main{
+    .ind-info{
+      p{
+        font-size: large;
+      }
+    }
     .ind-service{
       width: 60%;
       .grid-service {
@@ -446,7 +476,11 @@ text-align: center;
         grid-template-rows: auto auto;
         row-gap: 20px;
         column-gap: 20px;
+        grid-template-areas:
+                "1 2"
+                "3 4";
         .service{
+          margin: 0;
           height: 300px;
           h3{
             font-size: x-large;
@@ -454,6 +488,11 @@ text-align: center;
         }
       }
 
+      .offer-txt{
+        margin: 50px auto;
+        font-size: xx-large;
+        width: 50%;
+      }
     }
     .ind-teamet{
       justify-content: space-around;
@@ -461,7 +500,15 @@ text-align: center;
         width: 20%;
         padding: 5px;
         img{
-          height: 600px;
+          height: auto;
+        }
+        div{
+          h3{
+            font-size: large;
+          }
+          h4{
+            font-size: medium;
+          }
         }
       }
     }

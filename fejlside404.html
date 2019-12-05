@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<!-- Fortæller det er html5 -->
+<!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
+<html lang="da">
+
+<!-- I <head> har man opsætning - alt det som man ikke ser som selve indholdet -->
+<head>
+
+    <!-- Sætter tegnsætning til utf-8 som bl.a. tillader danske bogstaver -->
+    <meta charset="utf-8">
+
+    <!-- Titel som ses oppe i browserens tab mv. -->
+    <title>Sigende titel</title>
+
+    <!-- Metatags der fortæller at søgemaskiner er velkomne, hvem der udgiver siden og copyright information -->
+    <meta name="robots" content="All">
+    <meta name="author" content="Udgiver">
+    <meta name="copyright" content="Information om copyright">
+
+    <!-- Sikrer man kan benytte CSS ved at tilkoble en CSS fil -->
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+
+    <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<!-- i <body> har man alt indhold på siden -->
+<body>
+<nav>
+    <a href="index.html" class="logo-nav"></a>
+    <div class="nav-btn">NAV</div>
+    <div class="nav">
+        <a href="#"><h3>Service</h3></a>
+        <a href="#"><h3>Om os</h3></a>
+        <a href="kontakt.html"><h3>Kontakt</h3></a>
+    </div>
+</nav>
+
+<main class="fejlside">
+    <h1>Hov der skete en fejl.</h1>
+    <h2>Den valgte side er enten ikke tilgængelig eller eksistere ikke. </h2>
+
+    <p>Du kan gå til vores <a href="index.html">Forside</a></p>
+
+</main>
+
+<footer>
+    <div class="contact-footer">
+        <p>
+            <b>Addresse:</b>
+            Nygade 2 <br>
+            4200 Slagelse
+        </p>
+        <p><b>Tel nr.</b> 00000000</p>
+        <p><b>CVR</b> 00 00 00 00</p>
+    </div>
+    <div>
+        <p>Copyright all rights reserved</p>
+    </div>
+    <div>
+        <a href="#">
+            Cookie- og privatlivspolitik
+        </a>
+        <a href="#">
+            Databehandleraftale
+        </a>
+    </div>
+</footer>
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="js/script.min.js"></script>
+</body>
+</html>

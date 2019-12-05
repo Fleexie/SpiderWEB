@@ -24,6 +24,9 @@
     <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <script src="https://kit.fontawesome.com/7d513cd01b.js" crossorigin="anonymous"></script>
+
+
 </head>
 
 <!-- i <body> har man alt indhold på siden -->
@@ -34,7 +37,7 @@
     <div class="nav-btn">NAV</div>
     <div class="nav">
         <a href="services.html"><h3>Service</h3></a>
-        <a href="#"><h3>Om os</h3></a>
+        <a href="omOs.html"><h3>Om os</h3></a>
         <a href="kontakt.html"><h3>Kontakt</h3></a>
     </div>
 </nav>
@@ -164,15 +167,16 @@
 </div>
 <footer>
     <div class="contact-footer">
-        <p>Addresse
-            Vej navn + nr <br>
-            By nummer <br>
-            By navn</p>
-        <p><b>Tel nr.</b> 00000000</p>
+        <p>
+            <b><i class="fas fa-map-marked-alt"></i> Addresse:</b>
+            Nygade 2 <br>
+            4200 Slagelse
+        </p>
+        <p><b><i class="fas fa-phone-alt"></i></b> 00000000</p>
         <p><b>CVR</b> 00 00 00 00</p>
     </div>
     <div>
-        <p>Copyright all rights reserved</p>
+        <p><i class="far fa-copyright"></i> Copyright all rights reserved</p>
     </div>
     <div>
         <a href="#">
@@ -183,7 +187,8 @@
         </a>
     </div>
 </footer>
-
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="js/script.min.js"></script>
 <script>
     $(document).ready(function () {
         $(".afsnitEt").click(function () {

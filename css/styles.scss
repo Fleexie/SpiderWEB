@@ -15,7 +15,9 @@ header{
   align-items: center;
   h1{
     color: aliceblue;
-    font-size: xx-large;
+    font-size: large;
+    padding: 0 10%;
+    text-align: center;
   }
   div{
     position: absolute;
@@ -58,7 +60,7 @@ nav{
       content: "SpiderWEB";
       color: aliceblue;
       margin-left: 100px;
-      font-size: 40px;
+      font-size: 20px;
       line-height: 80px;
     }
   }
@@ -93,6 +95,17 @@ nav{
       }
     }
   }
+  .nav-btn{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10%;
+    .line1, .line2, .line3{
+      width: 30px;
+      height: 3px;
+      margin: 2px 0;
+      background-color: aliceblue;
+    }
+  }
 }
 
 main{
@@ -110,7 +123,7 @@ main{
   }
   .ind-service{
 
-    width: 60%;
+    width: 90%;
     margin: 50px auto;
     max-width: 1440px;
 
@@ -119,10 +132,10 @@ main{
     .grid-service{
       width: 100%;
       display: grid;
-      grid-template-columns: 50% 50%;
+      grid-template-columns: 45% 45%;
       grid-template-rows: auto auto;
       row-gap: 20px;
-      column-gap: 20px;
+      column-gap: 10%;
       grid-template-areas:
               "1 2"
               "3 4";
@@ -131,13 +144,13 @@ main{
       position: relative;
       display: flex;
       width: 100%;
-      height: 300px;
+      height: 200px;
       background-color: lightgrey;
       text-align: center;
       align-items: center;
       justify-content: center;
       h3{
-        font-size: x-large;
+        font-size: medium;
       }
 
     }
@@ -160,7 +173,7 @@ main{
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: end;
+        justify-content: flex-end;
         span{
           display: none;
           animation: service 200ms ease-in-out;
@@ -228,47 +241,69 @@ main{
   text-align:right;
   height:400px;
   width:100%;
+  margin: 50px 0 0 0;
+  border: none;
+  clip-path: ellipse(75% 80% at 50% 100%);
+  &:hover{
+    animation: clip-map 1s ease forwards;
+  }
+  &:not(:hover){
+      animation: clip-map2 1s ease forwards;
+}
+}
+
+@keyframes clip-map {
+  from{
+    clip-path: ellipse(75% 80% at 50% 100%);
+  }
+  to{
+    clip-path: ellipse(150% 150% at 50% 50%);
+  }
+}
+@keyframes clip-map2 {
+  from{
+    clip-path: ellipse(150% 150% at 50% 50%);
+  }
+  to{
+    clip-path: ellipse(75% 80% at 50% 100%);
+  }
 }
 .gmap_canvas {
   overflow:hidden;
   background:none!important;
   height:400px;
   width:100%;
+  border: none;
 }
 iframe{
   width: 100%;
   height: 100%;
 }
 
-.map-overlay{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(20, 20, 20, .2);
-}
-.map-overlay:hover{
-  display: none;
-}
+
 
 .kontakt-page{
-  display: grid;
+  display: flex;
   width: 100%;
-  grid-template-rows: 200px 200px;
   justify-content: space-around;
-  grid-template-columns: 40% 40%;
-  grid-template-areas:
-          "infoIntro formK"
-          "infoK formK";
+  flex-direction: column;
+  align-items: center;
 }
 
 .kontakt-info{
   grid-area: infoK;
+  margin: auto;
+  line-height: 20px;
+  align-self: center;
+  font-size: large;
 }
 
 .kontakt-intro{
   grid-area: infoIntro;
+  text-align: center;
+  line-height: 20px;
+  align-self: center;
+  font-size: large;
 }
 
 .Kontakt-Form{
@@ -276,14 +311,26 @@ iframe{
   display: flex;
   flex-direction: column;
   width: 100%;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  height: 100%;
 
   input{
-    width: 100%;
+    width: 50%;
+    height: 30px;
+    padding-left: 10px;
+    border: none;
+    border-bottom: solid 1.5px gray;
+    &:hover{
+      border-bottom: solid 1.5px black;
+    }
   }
 
+
   textarea{
+    width: 50%;
+  }
+  button{
 
   }
 }
@@ -295,11 +342,13 @@ footer{
   align-items: center;
   justify-content: center;
   background-color: gray;
+text-align: center;
+  padding: 20px 0;
   div:nth-of-type(odd){
     width: 100%;
-    margin: 20px 0;
+    margin: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-around;
     align-content: center;
@@ -313,7 +362,22 @@ footer{
 
 }
 
+.fejlside{
+  height: 60vh;
+  width: 100%;
+  h1, h2{
+    margin: 200px auto 0 auto;
+  }
+}
+
 @media screen and(min-width: 768px) {
+  header{
+    h1{
+      font-size: xx-large;
+
+    }
+  }
+
   nav{
     position: fixed;
     z-index: 900;
@@ -373,6 +437,24 @@ footer{
   }
 
   main{
+    .ind-service{
+      width: 60%;
+      .grid-service {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto;
+        row-gap: 20px;
+        column-gap: 20px;
+        .service{
+          height: 300px;
+          h3{
+            font-size: x-large;
+          }
+        }
+      }
+
+    }
     .ind-teamet{
       justify-content: space-around;
       div{
@@ -383,6 +465,43 @@ footer{
         }
       }
     }
+  }
+/* Footer */
+  footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    div:nth-of-type(odd){
+      width: 100%;
+      margin: 20px 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-content: center;
+      a{
+        padding: 0 20px;
+      }
+      &:nth-of-type(3){
+        justify-content: center;
+      }
+    }
+
+  }
+
+  /* Kontakt side */
+  .kontakt-page{
+    display: grid;
+    width: 100%;
+    grid-template-rows: 200px 200px;
+    justify-content: space-around;
+    grid-template-columns: 40% 40%;
+    grid-template-areas:
+            "infoIntro formK"
+            "infoK formK";
   }
 }
 

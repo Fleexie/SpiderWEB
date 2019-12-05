@@ -12,6 +12,8 @@
 
     <!-- Titel som ses oppe i browserens tab mv. -->
     <title>SpiderWEB | Kontakt</title>
+    <meta name="description" content="SpiderWeb er et webbureau som er bestående af kompetente multimediedesignere. Kontakt os i dag!" />
+
 
     <!-- Metatags der fortæller at søgemaskiner er velkomne, hvem der udgiver siden og copyright information -->
     <meta name="robots" content="All">
@@ -23,6 +25,14 @@
 
     <!-- Sikrer den vises korrekt på mobil, tablet mv. ved at tage ift. skærmstørrelse -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- OG -->
+    <meta property="og:title" content="SpiderWEB | Kontakt" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.fleexiedesigns.com/spiderweb/kontakt.html" />
+    <meta property="og:image" content="https://www.fleexiedesigns.com/img/logo.svg" />
+    <meta property="og:description" content="SpiderWeb er et webbureau som er bestående af kompetente multimediedesignere. Kontakt os i dag!" />
+    <meta property="og:locale" content="da_DK" />
 
 </head>
 <body>
@@ -44,24 +54,29 @@
 
     <section class="kontakt-intro">
         <p>
-            Har du nogle spørgsmål?
-            Er der noget vi kan hjælpe med?
+            Har du nogle spørgsmål? <br>
+            Er der noget vi kan hjælpe med? <br>
+            Tøv ikke med at kontakte os!
         </p>
     </section>
 
     <section class="kontakt-info">
         <p>
-            Telefon nr:
+            <b>Telefon nr:</b> 00000000
+            <br>
 
-            Addresse:
-            By:
+            <b>Addresse:</b> Nygade 2
+            <br>
+            <b>By:</b> 4200 Slagelse
+            <br>
 
-            Email:
+            <b>Email:</b> contact@spiderweb.dk
         </p>
     </section>
 
     <form action="#" class="Kontakt-Form">
         <h2>Kontakt form</h2>
+
         <label aria-label="Navn" id="Navn">Navn</label>
         <input type="text" aria-labelledby="Navn" id="NavnInput" placeholder="Skriv dit navn.." required>
 
@@ -78,18 +93,18 @@
 </main>
 <div class="mapouter">
     <div class="gmap_canvas">
-        <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=slagelse%20nygade%202&t=&z=17&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=slagelse%20nygade%202&t=&z=17&ie=UTF8&iwloc=&output=embed"></iframe>
     </div>
 
-    <div class="map-overlay"></div>
 </div>
 
 <footer>
     <div class="contact-footer">
-        <p>Addresse
-            Vej navn + nr <br>
-            By nummer <br>
-            By navn</p>
+        <p>
+            <b>Addresse:</b>
+            Nygade 2 <br>
+            4200 Slagelse
+        </p>
         <p><b>Tel nr.</b> 00000000</p>
         <p><b>CVR</b> 00 00 00 00</p>
     </div>
@@ -105,5 +120,8 @@
         </a>
     </div>
 </footer>
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="js/script.min.js"></script>
 </body>
 </html>

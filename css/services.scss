@@ -1,0 +1,140 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.præsentation {
+  margin-top: 20%;
+  padding-right: 25px;
+  padding-left: 25px;
+  h1 {
+    font-size: 30pt;
+    color: yellow;
+    text-align: center;
+  }
+
+}
+
+.overskrift {
+  font-size: 30pt;
+  color: yellow;
+  padding-left: 25px;
+  text-align: center;
+
+}
+
+.webDesignBillede {
+  background-image: url("../img/designBillede.jpeg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 300px;
+  margin: 5%;
+}
+
+.designTekst {
+  margin: 5%;
+  text-align: justify;
+  background-color: grey;
+  padding: 6px;
+}
+
+.designBillede {
+  background-image: url("../img/webDesignBillede.jpeg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 300px;
+  margin: 5%;
+}
+
+.programmeringsBillede {
+  background-image: url("../img/programmeringsBillede.jpeg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 300px;
+  margin: 5%;
+}
+
+.wordpressBillede {
+  background-image: url("../img/wordpress.svg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: white;
+  height: 300px;
+  margin: 5%;
+}
+
+.webshopBillede {
+  background-image: url("../img/webshopBillede.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 300px;
+  margin: 5%;
+}
+
+.markedsføringsBillede {
+  background-image: url("../img/markedsføringsBillede.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 300px;
+  margin: 5%;
+}
+
+.nyhedsbrevBillede {
+  background-image: url("../img/nyhedsbrevBillede.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 300px;
+  margin: 5%;
+}
+
+.vedligeholdelsesBillede {
+  background-image: url("../img/vedligeholdelsesBillede.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 300px;
+  margin: 5%;
+}
+
+.afsnitEt, .afsnitTo, .afsnitTre{
+  display: none;
+}
+
+
+
+
+@media screen and(min-width: 768px) {
+  .præsentation{
+    margin-top: 10%;
+    text-align: center;
+  }
+
+  .afsnitEt, .afsnitTo, .afsnitTre{
+    display: block;
+    width: 80%;
+    padding: 2%;
+    margin-left: 10%;
+  }
+
+  .afsnitTre{
+    margin-bottom: 5%;
+  }
+
+  .hideEt, .hideTo, .hideTre{
+    display: none;
+  }
+
+  .container {
+    display: grid;
+    grid-column-gap: 50px;
+    grid-template-columns: auto auto;
+  }
+
+}

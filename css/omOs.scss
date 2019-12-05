@@ -1,63 +1,95 @@
 
-.os{
-  padding-top: 15%;
-  .jannik{
+.osSektion {
+  padding-top: 10%;
+
+  .overskrift{
+    margin-top: 80px;
+  }
+  .jannik {
     background-image: url("../img/headshot.jpeg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 250px;
+    height: 400px;
     border-radius: 25%;
     margin: 5%;
   }
-  .mohammed{
+  .mohammed {
     background-image: url("../img/headshot.jpeg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 250px;
+    height: 400px;
     border-radius: 25%;
     margin: 5%;
   }
-  .robin{
+  .robin {
     background-image: url("../img/headshot.jpeg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 250px;
+    height: 400px;
     border-radius: 25%;
     margin: 5%;
   }
-  .mia{
+  .mia {
     background-image: url("../img/headshot.jpeg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    height: 250px;
+    height: 400px;
     border-radius: 25%;
     margin: 5%;
   }
 
-  .jannik:hover, .mohammed:hover, .robin:hover, .mia:hover{
-      cursor: pointer;
-      filter: grayscale(100%);
-    .hoverTekst{
-      display: block;
+  .jannik:hover, .mohammed:hover, .robin:hover, .mia:hover {
+    cursor: pointer;
+    filter: grayscale(100%);
+    .hoverTekst {
+      display: flex;
+      justify-content: end;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 55%;
     }
   }
 
-  .hoverTekst{
+  .hoverTekst {
     display: none;
-    position: absolute;
-    bottom: 0;
-    left: 30%;
     text-align: center;
+
   }
 }
 
-.omOsSektion{
-  h3, h1{
+.omOsSektion {
+  h3, h1 {
     margin: 5%;
     padding: 6px;
+  }
+}
+
+@media screen and(min-width: 768px) {
+  .osSektion {
+    .os {
+      display: flex;
+      flex-direction: row;
+      padding-top: 2%;
+
+      .jannik, .mohammed, .robin, .mia {
+        width: 25%;
+        height: 300px;
+        margin: 2%;
+      }
+
+      }
+    .overskrift{
+      margin-top: 30px;
+    }
+  }
+
+  .omOsSektion {
+    width: 45%;
+    text-align: center;
+    margin-left: 28%;
   }
 }

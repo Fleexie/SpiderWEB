@@ -313,13 +313,25 @@ iframe{
   width: 100%;
   justify-content: space-around;
   align-items: center;
+  height: 100%;
 
   input{
     width: 50%;
+    height: 30px;
+    padding-left: 10px;
+    border: none;
+    border-bottom: solid 1.5px gray;
+    &:hover{
+      border-bottom: solid 1.5px black;
+    }
   }
+
 
   textarea{
     width: 50%;
+  }
+  button{
+
   }
 }
 
@@ -348,6 +360,14 @@ text-align: center;
     }
   }
 
+}
+
+.fejlside{
+  height: 60vh;
+  width: 100%;
+  h1, h2{
+    margin: 200px auto 0 auto;
+  }
 }
 
 @media screen and(min-width: 768px) {
